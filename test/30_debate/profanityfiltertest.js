@@ -11,5 +11,10 @@ describe('ProfanityFilter class test', () => {
         profanityFilter.isProfane("Hey what's up ?").should.equal(false);
     });
 
+    it('should return true with profanities', () => {
+        const profanityFilter = new ProfanityFilter();
+        profanityFilter.isProfane("You are an asshole.").should.equal(true);
+    });
+
 
 });

@@ -14,6 +14,8 @@ describe('ProfanityFilter class test', () => {
     it('should return true with profanities', () => {
         const profanityFilter = new ProfanityFilter();
         profanityFilter.isProfane("You are an asshole.").should.equal(true);
+        profanityFilter.isProfane("Fuck you..").should.equal(true);
+        profanityFilter.isProfane("You are a poop").should.equal(true);
     });
 
 

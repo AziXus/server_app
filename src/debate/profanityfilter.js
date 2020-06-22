@@ -1,7 +1,13 @@
+import Filter from 'bad-words'
+
 export class ProfanityFilter {
+    filter;
+
+    constructor() {
+        this.filter = new Filter();
+    }
+
     isProfane(text) {
-        if (text.includes('asshole'))
-            return true;
-        return false;
+        return this.filter.isProfane(text);
     }
 }
